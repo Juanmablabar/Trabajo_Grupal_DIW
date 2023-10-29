@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Datos</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        body h2{
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            text-align: left;
+            border: 2px solid #ccc;
+            padding: 20px;
+            width: 600px;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            width: 200px;
+        }
+        .form-group input, .form-group textarea {
+            flex: 1;
+            padding: 5px;
+        }
+        .center-button {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Datos Profesor</h2>
+        <form action="procesar_formulario.php" method="post">
+        
+            
+            <div class="form-group">
+                <label for="nombre_profesor">Nombre:</label>
+                <input type="text" id="nombre_profesor" name="nombre_profesor" required>
+            </div>
+
+            <div class="form-group">
+                <label for="apellidos_profesor">Apellidos:</label>
+                <input type="text" id="apellidos_profesor" name="apellidos_profesor" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contrasena_profesor">Contraseña de acceso:</label>
+                <input type="password" id="contrasena_profesor" name="contrasena_profesor" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email_profesor">Correo electrónico:</label>
+                <input type="email" id="email_profesor" name="email_profesor" required>
+            </div>
+
+            <div class="center-button">
+                <input type="submit" value="Guardar">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

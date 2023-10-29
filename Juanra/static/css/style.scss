@@ -1,0 +1,142 @@
+@use "vars";
+
+header {
+    font-size: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: vars.$header_background;
+    color: vars.$header_text_color;
+    text-align: center;
+}
+
+section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: vars.$body_background_color;
+    color: vars.$body_font_color;
+
+    div {
+        h1 {
+            font-size: 2rem;
+        }
+
+        table {
+            width: 1048px;
+            border: 1px solid black;
+            border-collapse: collapse;
+
+            tbody {
+                tr {
+                    &:hover {
+                        background-color: vars.$table_row_hover;
+                    }
+                }
+
+            }
+
+            tr {
+                border: 1px solid black;
+                border-collapse: collapse;
+
+                th {
+                    border: 1px solid black;
+                    padding: 1rem;
+
+                    &:nth-child(1) {
+                        width: 150px;
+                    }
+                }
+
+                td {
+                    padding: 1rem;
+                    border: 1px solid black;
+                }
+            }
+        }
+
+        ul {
+            margin: 8px;
+            padding: 0;
+            list-style: none;
+        }
+
+        #anadir {
+            text-align: center;
+        }
+
+    }
+
+    #empresa {
+        display: inline-flex;
+        border: 1px solid black;
+        padding: 1rem;
+        margin: 1.5rem 0 0 0;
+
+        h4 {
+            margin: 0 0 0 16px;
+        }
+
+        a {
+            color: vars.$header_text_color;
+            text-decoration: none;
+        }
+    }
+}
+
+/*footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .columnas {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: orange;
+
+        ul{
+            list-style: none;
+            margin:0px;
+            padding: 0px;
+        }
+    }
+}*/
+footer{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:white;
+    
+    div.columnas{
+        width:100%;
+        display:flex;
+        flex-direction: row;
+        div{
+            flex:1;
+            padding:1rem;
+            color:black;
+
+            ul{
+                list-style-type: none;
+                margin-left: 0;
+            }
+
+            a{
+                text-decoration: none;
+                color:black;
+                padding:0.5rem;
+                display:block;
+            }
+            a:hover{
+                text-decoration: underline;
+            }
+        }
+
+        div:nth-child(1){
+            flex:2;
+        }
+    }
+
+}
