@@ -1,0 +1,66 @@
+@use "vars";
+@use "footer";
+@use "lista_alumnos";
+@use "lista_empresas";
+
+header{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: vars.$color_fondo_header;
+    position: sticky;
+    top:0px;
+    z-index: 9;
+    color: vars.$color_fuente_titulo;
+
+    
+    nav{
+        align-self: stretch;
+        background-color: vars.$color_fondo_menu;
+        color:vars.$color_fuente_menu;
+        display:flex;
+        justify-content:space-between;
+        text-shadow: 2px 2px 3px vars.$color_fondo_header;
+
+        ul{
+            display:flex;
+            list-style-type: none;
+            margin:0;
+            padding:0;
+
+            li{
+                position: relative;
+                padding: vars.$paddingheader;
+                font-size:vars.$tamaño_letra_menu;
+                color:vars.$color_fuente_menu;
+
+                &:hover{
+                    text-shadow: 2px 2px 3px lightblue;
+                    background-color: darkgray;
+                }                
+            }
+
+        }
+
+    
+
+ 
+        a{
+            color:vars.$color_fuente_menu;
+            text-decoration: none;
+        }
+
+    
+  
+
+    }
+
+
+
+
+}
+
+
+
+
+
