@@ -1,0 +1,180 @@
+@use "vars";
+
+
+section.studentProfile {
+    align-items: center;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+        "actividades actividades"
+        "horas empresa";
+    background-image: url("../img/cesur-M.jpg");
+    background-size: cover;
+
+    div.actividades {
+        grid-area: actividades;
+        text-align: center;
+        justify-self: center;
+        background-color: vars.$color_fondo_tabla;
+        box-shadow: vars.$box-shadow-color;
+        border-radius: 30px;
+        margin-top: 2rem;
+        padding: 2rem;
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        table {
+            width: 1048px;
+            border: 1px solid white;
+            border-collapse: collapse;
+
+            tbody {
+                tr {
+                    &:hover {
+                        background-color: vars.$color_fondo_tabla-hover;
+                    }
+                }
+
+            }
+
+            tr {
+                border: 1px solid white;
+                border-collapse: collapse;
+
+                th {
+                    padding: 1rem;
+                    color: white;
+
+                    &:nth-child(1) {
+                        width: 150px;
+                    }
+                }
+
+                td {
+                    padding: 1rem;
+                    color: white;
+
+                    &:last-child {
+                        padding: 1rem 0.3rem 1rem 1rem;
+                        opacity: 0;
+
+                        button {
+                            background-color: vars.$color_boton_tabla;
+                        }
+                    }
+
+                    &:nth-last-child(2) {
+                        padding: 1rem 0.3rem 1rem 1rem;
+                        opacity: 0;
+
+                        button {
+                            background-color: vars.$color_boton_tabla;
+                        }
+                    }
+                }
+
+                &:hover td:nth-last-child(2) {
+                    opacity: 1;
+
+                }
+
+                &:hover td:last-child {
+                    opacity: 1;
+                }
+            }
+        }
+
+
+
+        #anadir {
+            margin-top: 2rem;
+            text-align: center;
+
+            input {
+                width: 15%;
+                height: 50px;
+                background-color: vars.$color-boton;
+                color: white;
+            }
+        }
+        #editActivityForm {
+            position: fixed;
+            width: 400px;
+            top: 50%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            padding: 1rem;
+            background-color: white;
+            z-index: 1;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            form{
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+
+                label{
+                    font-weight: bold;
+                }
+
+                input{
+                    width: 100%;
+                    padding: 0.5rem;
+                    box-sizing: border-box;
+                    margin-top: 4px;
+                }
+                button{
+                    padding: 8px;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+
+    div.horas {
+        background-color: vars.$color_fondo_tabla;
+        grid-area: horas;
+        justify-self: right;
+        padding: 1rem;
+        border-radius: 30px;
+        display: flex;
+
+        div {
+            margin: 0 1.5rem;
+            text-align: center;
+            ul {
+                margin: 8px;
+                padding: 0;
+                list-style: none;
+
+                li {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    div.empresa {
+        background-color: vars.$color_fondo_tabla;
+        //box-shadow: vars.$box-shadow-color;
+        border-radius: 30px;
+        margin-left: 5rem;
+        width: fit-content;
+        grid-area: empresa;
+        display: inline-flex;
+        gap: 5rem;
+        padding: 1rem;
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
+::backdrop{
+    background-color: rgb(0, 0, 0, 0.5);
+}

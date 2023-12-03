@@ -1,0 +1,463 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap");
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 114);
+}
+footer div.columnas {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+footer div.columnas div {
+  flex: 1;
+  padding: 1rem;
+  color: white;
+}
+footer div.columnas div ul {
+  list-style-type: none;
+  margin-left: 0;
+}
+footer div.columnas div a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+  display: block;
+}
+footer div.columnas div a:hover {
+  text-decoration: underline;
+}
+
+section.studentProfile {
+  align-items: center;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  grid-template-columns: auto auto;
+  grid-template-areas: "actividades actividades" "horas empresa";
+  background-image: url("../img/cesur-M.jpg");
+  background-size: cover;
+}
+section.studentProfile div.actividades {
+  grid-area: actividades;
+  text-align: center;
+  justify-self: center;
+  background-color: rgba(71, 60, 228, 0.98);
+  box-shadow: 3px 3px 20px rgb(50, 62, 221);
+  border-radius: 30px;
+  margin-top: 2rem;
+  padding: 2rem;
+}
+section.studentProfile div.actividades h2 {
+  font-size: 2rem;
+}
+section.studentProfile div.actividades table {
+  width: 1048px;
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+section.studentProfile div.actividades table tbody tr:hover {
+  background-color: rgba(60, 50, 189, 0.98);
+}
+section.studentProfile div.actividades table tr {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+section.studentProfile div.actividades table tr th {
+  padding: 1rem;
+  color: white;
+}
+section.studentProfile div.actividades table tr th:nth-child(1) {
+  width: 150px;
+}
+section.studentProfile div.actividades table tr td {
+  padding: 1rem;
+  color: white;
+}
+section.studentProfile div.actividades table tr td:last-child {
+  padding: 1rem 0.3rem 1rem 1rem;
+  opacity: 0;
+}
+section.studentProfile div.actividades table tr td:last-child button {
+  background-color: rgb(252, 234, 135);
+}
+section.studentProfile div.actividades table tr td:nth-last-child(2) {
+  padding: 1rem 0.3rem 1rem 1rem;
+  opacity: 0;
+}
+section.studentProfile div.actividades table tr td:nth-last-child(2) button {
+  background-color: rgb(252, 234, 135);
+}
+section.studentProfile div.actividades table tr:hover td:nth-last-child(2) {
+  opacity: 1;
+}
+section.studentProfile div.actividades table tr:hover td:last-child {
+  opacity: 1;
+}
+section.studentProfile div.actividades #anadir {
+  margin-top: 2rem;
+  text-align: center;
+}
+section.studentProfile div.actividades #anadir input {
+  width: 15%;
+  height: 50px;
+  background-color: rgb(14, 26, 192);
+  color: white;
+}
+section.studentProfile div.actividades #editActivityForm {
+  position: fixed;
+  width: 400px;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  background-color: white;
+  z-index: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+section.studentProfile div.actividades #editActivityForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+section.studentProfile div.actividades #editActivityForm form label {
+  font-weight: bold;
+}
+section.studentProfile div.actividades #editActivityForm form input {
+  width: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  margin-top: 4px;
+}
+section.studentProfile div.actividades #editActivityForm form button {
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+}
+section.studentProfile div.horas {
+  background-color: rgba(71, 60, 228, 0.98);
+  grid-area: horas;
+  justify-self: right;
+  padding: 1rem;
+  border-radius: 30px;
+  display: flex;
+}
+section.studentProfile div.horas div {
+  margin: 0 1.5rem;
+  text-align: center;
+}
+section.studentProfile div.horas div ul {
+  margin: 8px;
+  padding: 0;
+  list-style: none;
+}
+section.studentProfile div.horas div ul li {
+  color: white;
+}
+section.studentProfile div.empresa {
+  background-color: rgba(71, 60, 228, 0.98);
+  border-radius: 30px;
+  margin-left: 5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  grid-area: empresa;
+  display: inline-flex;
+  gap: 5rem;
+  padding: 1rem;
+}
+section.studentProfile div.empresa a {
+  text-decoration: none;
+  color: white;
+}
+
+::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.signup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10rem;
+  background-image: url("../img/cesur-teatinos.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.signup form {
+  margin-right: 1rem;
+  margin-right: 1.5rem;
+}
+.signup form fieldset {
+  border-radius: 1rem;
+  background-color: rgba(71, 60, 228, 0.98);
+  border-color: rgb(0, 0, 114);
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.signup form fieldset legend {
+  text-align: left;
+  background-color: rgba(71, 60, 228, 0.98);
+  border-radius: 1rem;
+  border-top: solid 2px rgb(0, 0, 114);
+  padding: 0.2rem;
+  color: white;
+}
+.signup form fieldset p {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.signup form fieldset p input {
+  margin-left: 2rem;
+}
+.signup form fieldset p input:hover {
+  border-color: rgb(84, 95, 248);
+}
+.signup form fieldset p#signup {
+  justify-content: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-self: center;
+}
+.signup form fieldset p#signup input {
+  margin: 0px;
+  cursor: pointer;
+}
+.signup form fieldset p.error {
+  color: red;
+}
+
+div.foto {
+  position: relative;
+  display: inline-block;
+  height: 1050px;
+  margin-top: 0px;
+  background-color: rgba(69, 69, 236, 0.733);
+}
+div.imagen {
+  opacity: 70%;
+}
+div.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  border: 2px solid #ccc;
+  padding: 30px 70px;
+  width: 700px;
+  background-color: rgb(230, 213, 105);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+div.container h2 {
+  text-align: center;
+  color: rgb(0, 0, 114);
+  margin-bottom: 20px;
+}
+div.container div.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+div.container div.form-group label {
+  width: 150px;
+  color: rgb(0, 0, 114);
+}
+div.container div.center-button {
+  display: flex;
+  justify-content: center;
+}
+div.container button {
+  padding: 10px 20px;
+  background-color: rgb(255, 217, 0);
+  color: rgb(0, 0, 114);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+div.container button:hover {
+  background-color: rgb(252, 202, 33);
+}
+
+div.container div.form-group input,
+div.container div.form-group textarea {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid rgb(0, 0, 114);
+  background-color: rgb(253, 244, 189);
+}
+
+.container .form-group p {
+  background-color: rgb(253, 244, 189);
+  border: 1px solid #000;
+  text-align: center;
+  padding: 8px;
+  margin: 5px 0;
+}
+
+.imagen img {
+  max-width: 100%;
+  height: auto;
+}
+
+section#profesor {
+  background-image: url("../img/cesur-M.jpg");
+  background-size: cover;
+  padding: 2em;
+}
+section#profesor div.color {
+  background-color: rgba(71, 60, 228, 0.98);
+  border-radius: 5rem;
+  margin: 0 25vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 1fr 0.2fr;
+  grid-template-areas: "titulo" "tabla" "boton";
+}
+section#profesor h1 {
+  grid-area: titulo;
+  text-align: center;
+  color: white;
+}
+section#profesor table {
+  width: 70%;
+  border: 1px solid white;
+  border-collapse: collapse;
+  margin: 4em auto;
+  grid-area: tabla;
+  color: white;
+}
+section#profesor table tr {
+  border: 1px solid white;
+}
+section#profesor table tr:hover td {
+  background-color: rgba(60, 50, 189, 0.98);
+}
+section#profesor table th, section#profesor table td {
+  padding: 15px;
+  text-align: left;
+}
+section#profesor table a {
+  text-decoration: none;
+  color: white;
+}
+section#profesor table a:hover {
+  text-decoration: underline;
+}
+section#profesor table button:hover {
+  background-color: rgb(252, 234, 135);
+}
+section#profesor button#anadirAlumno {
+  grid-area: boton;
+  width: 15%;
+  height: 50px;
+  margin: auto;
+  background-color: rgb(14, 26, 192);
+  color: white;
+}
+
+section#empresa {
+  background-image: url("../img/cesur-M.jpg");
+  background-size: cover;
+  padding: 2em;
+}
+section#empresa div.color {
+  background-color: rgba(71, 60, 228, 0.98);
+  border-radius: 5rem;
+  margin: 0 25vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 1fr 0.2fr;
+  grid-template-areas: "titulo" "tabla" "boton";
+}
+section#empresa h1 {
+  grid-area: titulo;
+  text-align: center;
+  color: white;
+}
+section#empresa table {
+  width: 95%;
+  border: 1px solid white;
+  border-collapse: collapse;
+  margin: 4em auto;
+  grid-area: tabla;
+  color: white;
+}
+section#empresa table tr {
+  border: 1px solid white;
+}
+section#empresa table tr:hover td {
+  background-color: rgba(60, 50, 189, 0.98);
+}
+section#empresa table th, section#empresa table td {
+  padding: 15px;
+  text-align: left;
+}
+section#empresa table a {
+  text-decoration: none;
+  color: white;
+}
+section#empresa table a:hover {
+  text-decoration: underline;
+}
+section#empresa table button:hover {
+  background-color: rgb(252, 234, 135);
+}
+section#empresa button#anadirEmpresa {
+  grid-area: boton;
+  width: 15%;
+  height: 50px;
+  margin: auto;
+  background-color: rgb(14, 26, 192);
+  color: white;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(0, 0, 114);
+  position: sticky;
+  top: 0px;
+  z-index: 9;
+  color: rgb(255, 217, 0);
+}
+header a {
+  color: rgb(255, 217, 0);
+  text-decoration: none;
+}
+header nav {
+  align-self: stretch;
+  background-color: rgb(92, 92, 224);
+  color: rgb(252, 234, 135);
+  display: flex;
+  justify-content: space-between;
+  text-shadow: 2px 2px 3px rgb(0, 0, 114);
+}
+header nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+header nav ul li {
+  position: relative;
+  padding: 1rem;
+  font-size: 14px;
+  color: rgb(252, 234, 135);
+}
+header nav ul li:hover {
+  text-shadow: 2px 2px 3px lightblue;
+  background-color: darkgray;
+}
+header nav a {
+  color: rgb(252, 234, 135);
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */

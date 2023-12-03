@@ -1,0 +1,68 @@
+@use "vars";
+
+.signup {
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10rem;
+        background-image: url("../img/cesur-teatinos.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        form {
+            margin-right: 1rem;
+            margin-right: 1.5rem;
+
+            fieldset {
+                border-radius: 1rem;
+                background-color: vars.$color-login-box;
+                border-color: vars.$color_borde_login_box;
+                justify-content: center;
+                display: flex;
+                flex-direction: column;
+
+                legend {
+                    text-align: left;
+                    background-color: vars.$color-login-box;
+                    border-radius: 1rem;
+                    border-top: solid 2px vars.$color_borde_login_box;
+                    padding: 0.2rem;
+                    color: white;
+                }
+
+                p {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    input {
+                        margin-left: 2rem;
+
+                        &:hover {
+                            border-color: rgb(84, 95, 248);
+                        }
+                    }
+
+                    &#signup {
+                        justify-content: center;
+                        width: fit-content;
+                        align-self: center;
+
+                        input {
+                            margin: 0px;
+                            cursor: pointer;
+                        }
+                    }
+
+                    &.error {
+                        color: red;
+                    }
+                }
+            }
+        }
+
+
+}
